@@ -16,14 +16,12 @@
   line-height: 16px;
 }
 
-
 .main-png{
   width: 200px;
   height: 200px; 
   border-radius: 70%;
   
 }
-
 
 .drama-title{
   text-align:center;
@@ -36,6 +34,7 @@
   max-width:1200px;
   width:100%;
   margin:0 auto;
+  text-align:center
 }
 
 ul{font-size:0;}
