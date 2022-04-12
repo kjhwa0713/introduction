@@ -10,30 +10,32 @@
 </head>
 
 <body>
-  <img style="margin-left:50px; width: 500px; height: 500px; float:left " src="Images/713.jpg" alt="생일달력">
-  <img style="margin-right:50px; width: 500px; height: 500px; float:right " src="Images/6.jpg" alt="카페">
+  <img id="birthday" style="margin-left:50px; width: 450px; height: 500px; float:left " src="Images/713.jpg" alt="생일달력">
+  <img id="cafe" style="margin-right:50px; width: 450px; height: 500px; float:right " src="Images/6.jpg" alt="카페">
   
   <div style="text-align:center" class="mainbox">
     <h1>about me</h1>
     <hr>
+    <div class="container">
+      <img id="photo" class="main-png" src="Images/5.jpg" alt="프로필 사진">
+      <br>
+      <button onclick="changeImg()">프사 변경</button>
+      <input type="button" value="블랙모드" id="btn" onclick="toggleBack();"/>
+      <input type="button" value="숨기기" id="text" onclick="controlHide();"/>
+    </div>
     
-    <img class="main-png" src="Images/5.jpg" alt="프로필 사진">
-  
-    <a href="https://www.instagram.com/zzzzung._.h/"><h1 class="my-title">@zzzzung._.h</h1></a>
-
-    <div class="about-me-text">
+    <div class="about-me-text" id="aboutMe">
+      <a href="https://www.instagram.com/zzzzung._.h/"><h1 class="my-title">@zzzzung._.h</h1></a>
       <p>안녕하세요! 정보통신공학과 19학번 23살 김정화입니다. <br> 왼쪽 사진은 제 생일 7월 13일을 나타내고 오른쪽 사진은 저를 빈곤하게 만든 카페들입니다.</p>
       <p>웹은 처음 해봐서 미숙하고 뒤죽박죽이라 속상했지만! 앞으로 더 잘해질겁니다!</p>
       <p>저는 집순이 mbti 잇프피라서 누워서 드라마보는 것을 좋아합니다. <br> 제 최애 드라마를 소개해드리려고 합니다!.</p>
     </div> 
-
-  </div> 
-
+  </div>
+  
   <a href="https://www.youtube.com/watch?v=4fFnzpJl0IE&list=PLdyB3s37qpTP0mLUOcpb3iV_SSTYB9mox"><h1 class="drama-title">미스터 션샤인</h1></a>
   
   <div class="gallerylist">
     <ul>
-
       <li>
         <a href="">
           <div class="screen">
@@ -42,7 +44,6 @@
           </div>
       </a>
       </li>
-
       <li>
         <a href="">
           <div class="screen">
@@ -51,7 +52,6 @@
           </div>
         </a>
       </li>
-
       <li>
         <a href="">
           <div class="screen">
@@ -60,7 +60,6 @@
           </div>
         </a>
       </li>
-
       <li>
         <a href="">
           <div class="screen">
@@ -69,7 +68,6 @@
           </div>
         </a>
       </li>
-
       <li>
         <a href="">
           <div class="screen">
@@ -78,26 +76,20 @@
           </div>
         </a>
       </li>
-
     </ul>
-
       <p>미스터 션샤인은 2018년도에 방영한 드라마입니다. 키스신 없이도 로맨스를 그려낼 수 있음을 알려주는 드라마입니다. <br>
         전체적으로 분위기가 아련하고 보면서 많이 울었던 드라마예요!<br>
         이 드라마 보면 저처럼 <a href="https://sunshinestudio.co.kr/">션샤인 스튜디오</a>도 다녀오셔야해요!</p>
-      
       <div>
         <img style=" width: 200px; height: 200px;border-radius: 70%;" src="Images/1.jpg">
         <img style=" width: 200px; height: 200px;border-radius: 70%;" src="Images/2.jpg">
         <img style=" width: 200px; height: 200px;border-radius: 70%;" src="Images/3.jpg">
         <img style=" width: 200px; height: 200px;border-radius: 70%;" src="Images/4.jpg">
       </div>
-
   </div>
   <a href="https://www.youtube.com/watch?v=0eWuzCav3IY&list=PLsYpUeReTuYWNiqIen4HwObb611maCamq"><h1 class="drama-title">아스달 연대기</h1></a>
-  
   <div class="gallerylist">
     <ul>
-
       <li>
         <a href="">
           <div class="screen">
@@ -106,7 +98,6 @@
           </div>
       </a>
       </li>
-
       <li>
         <a href="">
           <div class="screen">
@@ -115,7 +106,6 @@
           </div>
         </a>
       </li>
-
       <li>
         <a href="">
           <div class="screen">
@@ -124,7 +114,6 @@
           </div>
         </a>
       </li>
-
       <li>
         <a href="">
           <div class="screen">
@@ -133,16 +122,67 @@
           </div>
         </a>
       </li>
-
     </ul>
-
     <p>아스달 연대기는 최근에 봤는데 꼭 몰입해서 보셔야해요! 주의할 점: 시즌2가 아직 안나와서 다음 내용이 궁금해서 미쳐버릴 수도 있음</p>
-  
   </div>
-
   <hr>
-  <h1>감사합니당</h1>
+  <h1 style="margin-left:30px;">감사합니당</h1>
 
+  <script>
+    //버튼으로 이미지 변경
+    function changeImg() {
+      const a=document.getElementById("photo").src;
+
+      if(a=="http://localhost:5500/Images/5.jpg")
+      {
+        document.getElementById("photo").src ="Images/7.jpg"
+      }
+      else document.getElementById("photo").src ="Images/5.jpg"
+    }
+    //블랙모드
+    function toggleBack()
+    {
+      const bbtn = document.getElementById("btn");
+      const body= document.querySelector('body');
+
+      if(bbtn.value=='블랙모드')
+      {
+        body.style.backgroundColor='black';
+        body.style.color='white';
+        bbtn.value='라이트모드';
+        alert('블랙모드로 변경')
+      }
+      else {
+        body.style.backgroundColor='white';
+        body.style.color='black';
+        bbtn.value='블랙모드';
+        alert('라이트모드로 변경')
+      }
+    }
+    //소개 숨기기/보이기
+    function controlHide(){
+      let text = document.getElementById("text");
+      let birth = document.getElementById("birthday");
+      let cafe = document.getElementById("cafe");
+
+      if(text.value=='숨기기')
+      {
+        document.getElementById("aboutMe").style.display = "none";
+        birth.style.height='400px';
+        cafe.style.height='400px';
+        text.value='보이기';
+        
+      }
+      else{
+        document.getElementById("aboutMe").style.display = "";
+        birth.style.height='500px';
+        cafe.style.height='500px';
+        text.value='숨기기';
+      } 
+    }
+
+
+
+  </script>
 </body>
 </html>
-
