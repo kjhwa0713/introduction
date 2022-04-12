@@ -11,6 +11,7 @@
 .my-title{
   font-size:20px;
 }
+
 .about-me-text {
   font-size:13px;
   line-height: 16px;
@@ -20,7 +21,6 @@
   width: 200px;
   height: 200px; 
   border-radius: 70%;
-  
 }
 
 .drama-title{
@@ -30,7 +30,7 @@
   background-color: #deb887;
 }
 
-.gallerylist{
+.gallery-list{
   max-width:1200px;
   width:100%;
   margin:0 auto;
